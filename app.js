@@ -1,150 +1,189 @@
-// #1
-// let number = +prompt("Enter a number")
-// function darajagaOshirish (num) {
-//     let daraja = num ** 3
-//     alert(daraja)
+// // #1
+// let arr = [1,5,3,4,6,2,8,7,0]
+// function sortDescending(num) {
+//     return num.sort((a, b) => a - b)
 // }
-// darajagaOshirish(number)
+// let reverse = sortDescending(arr).reverse()
+// console.log(reverse)
 
-// #2
-// let numOne = +prompt("Enter a number a")
-// let numTwo = +prompt("Enter a number b")
-//
-// function amount (num1, num2) {
-//     let amount = num1 + num2
-//     alert(amount)
+// // #2
+// let arr = [1,4,2,1,3,4,5,6,5,8]
+// function removeDublicate (num) {
+//     return [...new Set(num)]
 // }
-// amount(numOne, numTwo)
+// let newArr = removeDublicate(arr)
+// console.log(newArr.sort())
 
-// #3
-// let numOne = +prompt("Enter a number a")
-// let numTwo = +prompt("Enter a number b")
-//
-// function amount (num1, num2) {
-//     if (num1 > num2) {
-//         let amount = num1 - num2
-//         alert(amount)
+// // #3
+// let firstName = prompt("Enter your name")
+// let number = +prompt('Enter a number: 1 and 0')
+// function sayHelloBye (firstName, num) {
+//     let name = firstName.substring(0, 1)
+//     let newName = name + firstName.substring(1, firstName.length)
+//     console.log(newName)
+//     if (num === 1) {
+//         console.log('Hello ' + newName)
 //     } else {
-//         alert(num1 + " Kichik " + num2 + " dan")
+//         console.log("Bye " + newName)
 //     }
 // }
-// amount(numOne, numTwo)
+// sayHelloBye(firstName, number)
 
-// #4
-// let number = +prompt("Enter a number")
-// let daraja = +prompt("Nechanchi darajaga oshirmoqchisiz")
+// // #4
+// let number = 1221;
+// function symmetrical (num) {
+//     let str = num.toString()
+//     let revers = str.split('').reverse().join('')
 //
-// function darajagaOshirish(num, daraja) {
-//     switch (daraja) {
-//         case 2:
-//             alert(num ** 2)
-//             break
-//         case 3:
-//             alert(num ** 3)
-//             break
-//         case 4:
-//             alert(num ** 4)
-//             break
-//     }
-// }
-// darajagaOshirish(number, daraja)
-
-// #5
-// let number = +prompt("Enter a number")
-// function toqSonlar (num) {
-//     if (num > 0) {
-//         let toqSon;
-//         for (let i = 1; i <= num; i++) {
-//             if (i % 2 !== 0) {
-//                 toqSon = i
-//                 console.log(toqSon)
-//             }
-//         }
-//     }
-// }
-// toqSonlar(number)
-
-// #6
-// let number = +prompt("Enter a number")
-// function juftSonlar (num) {
-//     if (num > 0) {
-//         let juftSon;
-//         for (let i = 1; i <= num; i++) {
-//             if (i % 2 === 0) {
-//                 juftSon = i
-//                 console.log(juftSon)
-//             }
-//         }
-//     }
-// }
-// juftSonlar(number)
-
-// #7
-// let number1 = +prompt("Enter a number")
-// function increment (num) {
-//     return ++num
-// }
-// let incre = increment(number1)
-// console.log(incre)
-//
-// let number2 = +prompt("Enter a number")
-// function dicrement (num) {
-//     return --num
-// }
-// let dicre = dicrement(number2)
-// console.log(dicre)
-
-// #8
-// let number = +prompt("Enter a number")
-// function boluvhilar (number) {
-//     let bolinuvchilar= [];
-//     for (let i = 1; i <= number; i++) {
-//         if (number % i === 0) {
-//             bolinuvchilar = i
-//             console.log(bolinuvchilar)
-//         }
-//     }
-// }
-// boluvhilar(number)
-
-// #9
-// let numOne = +prompt("Enter a number: a")
-// let numTwo = +prompt("Enter a number: b")
-// let option = prompt("Enter a option: +, -, *, /")
-// function calculator (num1, num2, option) {
-//     if (num1 > num2) {
-//         switch (option) {
-//             case '+':
-//                 return num1 + num2
-//             case '-':
-//                 return num1 - num2
-//             case '*':
-//                 return num1 * num2
-//             case '/':
-//                 return num1 / num2
-//             default:
-//                 alert("Invalid option")
-//         }
+//     if (str == revers) {
+//         return true
 //     } else {
-//         alert(num1 + " kichik " + num2 + " dan")
+//         return false
 //     }
 // }
-// let calc = calculator(numOne, numTwo, option)
-// alert(calc)
-// console.log(calc)
+// let symmetricsNumber = symmetrical(number)
+// console.log(symmetricsNumber)
 
-// #10
-// for (let i = 1; i < 10; i++) {
-//     for (let k = 1; k < 10; k++) {
-//         console.log(`${i} * ${k} = ${i * k}`)
+// // #5
+// let friends = ["Ali", "Vali", "Jonibek", "Axror"]
+// function secretName (friends) {
+//     let names = []
+//     for (let i = 0; i < friends.length; i++) {
+//         names += friends[i].substring(0, 1)
+//     }
+//     return names.split('')
+// }
+//
+// let secretNames = secretName(friends)
+// console.log(secretNames.sort())
+
+// // #6
+// let arr = [1,2,3,5,7,8,4,6]
+// function counts (array) {
+//     let count = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         count += array[i]
+//     }
+//     console.log(count)
+// }
+//
+// let amount = counts(arr)
+// console.log(amount)
+
+// // #7
+// let arr = [1,2,3,5,7,8,4,6]
+// let number = 4
+// function counts (array, num) {
+//     let count = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         if (i == num) {
+//             break
+//         }
+//         count += array[i]
+//     }
+//     console.log(count)
+// }
+// let amount = counts(arr, number)
+// console.log(amount)
+
+// // #8
+// let str = "adfelcbgrd"
+// function sortEvenOdd (str) {
+//     let strEven = ' '
+//     let strOdd = ' '
+//     for (let i = 0; i < str.length; i++) {
+//         if (i % 2 === 0) {
+//             strEven += str[i]
+//         } else {
+//             strOdd += str[i]
+//         }
+//     }
+//     return ' Juft indexli harflar: ' + strEven + '\n Toq indexli harflar: ' + strOdd
+// }
+// let sortedStr = sortEvenOdd(str)
+// console.log(sortedStr)
+
+// // #9
+// let arr = ["bek", "ali", "g'ayrat", "doston", "sohib"]
+// function chartUsers (array) {
+//     if (array.length == 0) {
+//         return "no one online"
+//     }
+//     if (array.length == 1) {
+//         return array[0] + "online"
+//     }
+//     if (array.length == 2) {
+//         return array[0] + " and " + array[1] + " online"
+//     }
+//     if (array.length > 2) {
+//         return array[0] + " , " + array[1] + " and " + (array.length - 2) + " more online"
 //     }
 // }
+// let chartOnlineUsers = chartUsers(arr)
+// console.log(chartOnlineUsers)
 
+// // #10
+// let arr = [1,[5],3,[4],6,[2],8,[7],0]
+// function sortDescending(num) {
+//     return num.sort()
+// }
+// let sortedArr = sortDescending(arr)
+// console.log(sortedArr)
 
+// // #12
+// let str = "Hello"
+// let letter = 'l'
+// function countLatters (str, latter) {
+//     let character = 0
+//     for (let i =0; i < str.length; i++) {
+//         if (str[i] == latter) {
+//             character += 1
+//         }
+//     }
+//     return character
+// }
+// let sameLetters = countLatters(str, letter)
+// console.log(sameLetters)
 
+// // #13
+// let str = "123465436"
+// function changeNumber (str) {
+//     return Number(str)
+// }
+// let number = changeNumber(str)
+// console.log(number)
 
+// // #14
+// let arr = [true, true, true, false, true, true, true, true ,
+//     true, false, true, false, true, false, false, true ,
+//     true, true, true, true, false, false, true, true]
+// function countNumbers (arr) {
+//     let tru = 0
+//     let fols = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] == true) {
+//             tru += 1
+//         }
+//         if (arr[i] == false) {
+//             fols += 1
+//         }
+//     }
+//     return tru + " and " + fols
+// }
+// let count = countNumbers(arr)
+// console.log(count)
 
-
+// // #15
+// let number = 20
+// function numbers (num) {
+//     let nums = []
+//     for (let i = 1; i <= num; i++) {
+//         nums.push(i)
+//     }
+//     return nums
+// }
+// let arr = numbers(number)
+// console.log(arr)
 
 
 
