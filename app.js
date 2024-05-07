@@ -1,190 +1,159 @@
 // // #1
-// let arr = [1,5,3,4,6,2,8,7,0]
-// function sortDescending(num) {
-//     return num.sort((a, b) => a - b)
+// let arr = [1,2,3,4]
+// function findAverage(array) {
+//     if (array.length == " "  ) return 0;
+//     let result = 0;
+//     for (let i = 0; i < array.length; i++){
+//         result+= array[i]
+//     }
+//     return result / array.length
 // }
-// let reverse = sortDescending(arr).reverse()
-// console.log(reverse)
+// let find = findAverage(arr)
+// console.log(find)
 
 // // #2
-// let arr = [1,4,2,1,3,4,5,6,5,8]
-// function removeDublicate (num) {
-//     return [...new Set(num)]
+// let num = 4;
+// let power = 3;
+// function numberToPower(number, power){
+//     let a = 1
+//     for (let i = 0; i < power; i++) {
+//         a *= number
+//     }
+//     return a
 // }
-// let newArr = removeDublicate(arr)
-// console.log(newArr.sort())
+// let powers = numberToPower(num, power)
+// console.log(powers)
 
 // // #3
-// let firstName = prompt("Enter your name")
-// let number = +prompt('Enter a number: 1 and 0')
-// function sayHelloBye (firstName, num) {
-//     let name = firstName.substring(0, 1)
-//     let newName = name + firstName.substring(1, firstName.length)
-//     console.log(newName)
-//     if (num === 1) {
-//         console.log('Hello ' + newName)
-//     } else {
-//         console.log("Bye " + newName)
-//     }
-// }
-// sayHelloBye(firstName, number)
-
-// // #4
-// let number = 1221;
-// function symmetrical (num) {
-//     let str = num.toString()
-//     let revers = str.split('').reverse().join('')
+// let num = 6
+// function createArray(number){
+//     let newArray = [];
 //
-//     if (str == revers) {
-//         return true
-//     } else {
-//         return false
+//     for(let i = 1; i <= number; i++){
+//         newArray.push(i);
 //     }
+//     return newArray;
 // }
-// let symmetricsNumber = symmetrical(number)
-// console.log(symmetricsNumber)
-
-// // #5
-// let friends = ["Ali", "Vali", "Jonibek", "Axror"]
-// function secretName (friends) {
-//     let names = []
-//     for (let i = 0; i < friends.length; i++) {
-//         names += friends[i].substring(0, 1)
-//     }
-//     return names.split('')
-// }
-//
-// let secretNames = secretName(friends)
-// console.log(secretNames.sort())
-
-// // #6
-// let arr = [1,2,3,5,7,8,4,6]
-// function counts (array) {
-//     let count = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         count += array[i]
-//     }
-//     console.log(count)
-// }
-//
-// let amount = counts(arr)
-// console.log(amount)
-
-// // #7
-// let arr = [1,2,3,5,7,8,4,6]
-// let number = 4
-// function counts (array, num) {
-//     let count = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         if (i == num) {
-//             break
-//         }
-//         count += array[i]
-//     }
-//     console.log(count)
-// }
-// let amount = counts(arr, number)
-// console.log(amount)
-
-// // #8
-// let str = "adfelcbgrd"
-// function sortEvenOdd (str) {
-//     let strEven = ' '
-//     let strOdd = ' '
-//     for (let i = 0; i < str.length; i++) {
-//         if (i % 2 === 0) {
-//             strEven += str[i]
-//         } else {
-//             strOdd += str[i]
-//         }
-//     }
-//     return ' Juft indexli harflar: ' + strEven + '\n Toq indexli harflar: ' + strOdd
-// }
-// let sortedStr = sortEvenOdd(str)
-// console.log(sortedStr)
-
-// // #9
-// let arr = ["bek", "ali", "g'ayrat", "doston", "sohib"]
-// function chartUsers (array) {
-//     if (array.length == 0) {
-//         return "no one online"
-//     }
-//     if (array.length == 1) {
-//         return array[0] + "online"
-//     }
-//     if (array.length == 2) {
-//         return array[0] + " and " + array[1] + " online"
-//     }
-//     if (array.length > 2) {
-//         return array[0] + " , " + array[1] + " and " + (array.length - 2) + " more online"
-//     }
-// }
-// let chartOnlineUsers = chartUsers(arr)
-// console.log(chartOnlineUsers)
-
-// // #10
-// let arr = [1,[5],3,[4],6,[2],8,[7],0]
-// function sortDescending(num) {
-//     return num.sort()
-// }
-// let sortedArr = sortDescending(arr)
-// console.log(sortedArr)
-
-// // #12
-// let str = "Hello"
-// let letter = 'l'
-// function countLatters (str, latter) {
-//     let character = 0
-//     for (let i =0; i < str.length; i++) {
-//         if (str[i] == latter) {
-//             character += 1
-//         }
-//     }
-//     return character
-// }
-// let sameLetters = countLatters(str, letter)
-// console.log(sameLetters)
-
-// // #13
-// let str = "123465436"
-// function changeNumber (str) {
-//     return Number(str)
-// }
-// let number = changeNumber(str)
-// console.log(number)
-
-// // #14
-// let arr = [true, true, true, false, true, true, true, true ,
-//     true, false, true, false, true, false, false, true ,
-//     true, true, true, true, false, false, true, true]
-// function countNumbers (arr) {
-//     let tru = 0
-//     let fols = 0
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i] == true) {
-//             tru += 1
-//         }
-//         if (arr[i] == false) {
-//             fols += 1
-//         }
-//     }
-//     return tru + " and " + fols
-// }
-// let count = countNumbers(arr)
-// console.log(count)
-
-// // #15
-// let number = 20
-// function numbers (num) {
-//     let nums = []
-//     for (let i = 1; i <= num; i++) {
-//         nums.push(i)
-//     }
-//     return nums
-// }
-// let arr = numbers(number)
+// let arr = createArray(num)
 // console.log(arr)
 
+// // #4
+// let a = 3
+// let b = 10
+// let c = 12
+// function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+//     return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+// }
+// let goal = goals(a, b, c)
+// console.log(goal)
 
+// // #5
+// let f = 1
+// let r = 3
+// function lovefunc(flower1, flower2){
+//     if (flower1 % 2 == 0 && flower2 % 2 == 0) { return false }
+//     if (flower1 % 2 != 0 && flower2 % 2 != 0) { return false }
+//     return true
+// }
+// let flowers = lovefunc(f, r)
+// console.log(flowers)
 
+// // #6
+// let h = 1;
+// let m = 1;
+// let s = 1;
+// function past(h, m, s){
+//     let milliseconds = 0
+//     if (h >= 0 && h <= 23){
+//         milliseconds += (h * 3600000)
+//     }
+//     if (m >= 0 && m <= 59){
+//         milliseconds += (m * 60000)
+//     }
+//     if (s >= 0 && s <= 59){
+//         milliseconds += (s * 1000)
+//     }
+//     return milliseconds;
+// }
+// let hours = past(h, m, s)
+// console.log(hours)
 
+// // #7
+// let num = 17
+// function isPrime(n) {
+//     if (n <= 1)
+//         return false;
+//     for (let i = 2; i < n; i++)
+//         if (n % i == 0)
+//             return false;
+//     return true;
+// }
+// let number = isPrime(num)
+// console.log(number)
+
+// // #8
+// let arr = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]
+// function countPositivesSumNegatives(input) {
+//     if(!input || input == 0) return []
+//     let a = 0;
+//     let b = 0;
+//     for(let i = 0; i < input.length; i++) {
+//         if(input[i] > 0) a++
+//         if (input[i] < 0) {
+//             b += input[i]
+//         }
+//     }
+//     return [a, b]
+// }
+// let sums = countPositivesSumNegatives(arr)
+// console.log(sums)
+
+// // #9
+// let arr = [1,2,3,4,5]
+// function getAverage(arr){
+//     return arr[Math.trunc(arr.length / 2)]
+// }
+// let middleIndex = getAverage(arr)
+// console.log(middleIndex)
+
+// // #10
+// let str = "Sarah Harry"
+// function abbrevName(name){
+//     let arr = name.split(' ')
+//     let str = []
+//     for (let i = 0; i < arr.length; i++) {
+//         str.push(arr[i].substring(0, 1))
+//     }
+//     return str.join('.').toUpperCase()
+// }
+// let nameStr = abbrevName(str)
+// console.log(nameStr)
+
+// // #11
+// let a = '123'
+// let b = '321'
+// function sumStrings(a,b) {
+//     let num1 = BigInt(a)
+//     let num2 = BigInt(b)
+//     return String(num1 + num2)
+// }
+// let bigIntNumbers = sumStrings(a, b)
+// console.log(bigIntNumbers)
+
+// // #12
+// let num = -321
+// function reverseNumber(n) {
+//     let r = n.toString().split('').reverse().join('');
+//     return parseInt(r) * Math.sign(n);
+// }
+// let negative = reverseNumber(num)
+// console.log(negative)
+
+// // #13
+// let str = "turns out random test cases are easier than writing out basic ones"
+// function findShort(s){
+//     let arr = s.split(' ')
+//     return  Math.min.apply(Math, arr.map(function(str) { return str.length; }))
+// }
+// let shortLength = findShort(str)
+// console.log(shortLength)
