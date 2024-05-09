@@ -1,218 +1,242 @@
-// // 1
-// let str = 'abcd';
-// let arr = [0,3,1,2];
-// function scramble(str, arr) {
+// // #1
+// let num = 5
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// let arr = nums(num)
+// console.log(arr)
+
+// // #2
+// let num = 4
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// let arr = nums(num)
+// let res = arr.map((item) => 2 ** item)
+// console.log(res)
+
+// // #3
+// let num = 15
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// let array = nums(num)
+// let res = array.reduce((sum, item) => sum + item, 0)
+// console.log(res)
+
+// // #4
+// let num = 10
+// function number (n) {
+//     let arrOdd = []
+//     let arrEven = []
+//     let arr = []
+//     for (let i = 0; i <= n; i++) {
+//         arr.push(i + '0')
+//     }
+//     for (let k = 1; k <  arr.length; k++) {
+//         if(k % 2 === 0) {
+//             arrEven.push(+arr[k])
+//         }
+//         if (k % 2 !== 0) {
+//             arrOdd.push(+arr[k])
+//         }
+//     }
+//     let a = arrEven.reduce((sum, item) => sum + item, 0)
+//     let b = arrOdd.reduce((sum, item) => sum + item, 0)
+//     return a - b
+// }
+// let array = number(num)
+// console.log(array)
+
+// // #5
+// let num = 5
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// let arr = nums(num)
+// console.log(arr.reduce((s, i) => s + i, 0))
+
+// // #6
+// let num = 10
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         arr.push(i)
+//     }
+//     return arr.sort((a, b) => b - a)
+// }
+// let arr = nums(num)
+// console.log(arr)
+
+// // #7
+// let users = [
+//     {
+//         name: "Kamol",
+//         age: 22
+//     },
+//     {
+//         name: "Ali",
+//         age: 28
+//     },
+//     {
+//         name: "Vali",
+//         age: 39
+//     }
+// ]
+// function ageDifferens (arr){
+//     let ageArr = []
+//     for (let i of arr) {
+//         for (let key in i) {
+//             ageArr.push(i['age'])
+//         }
+//     }
+//     ageArr = [... new Set(ageArr)]
+//     let differens1 = ageArr[0] - ageArr[1]
+//     let differens2 = ageArr[1] - ageArr[2]
+//     let differens3 = ageArr[0] - ageArr[2]
+//     return `Kamol va Ali yoshlari o'rtasidagi farq ${Math.abs(differens1)}
+//     Ali va Vali yoshlari o'rtasidagi farq ${Math.abs(differens2)}
+//     Kamol va Vali yoshlari o'rtasidagi farq ${Math.abs(differens3)}`
+// }
+// let differens = ageDifferens(users)
+// console.log(differens)
+
+// // #8
+// let n = 15
+// function newArr (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// let array = newArr(n)
+// function findIndex (arr, k, l) {
 //     let newArr = []
-//     for (let i = 0; i < arr.length; i++) {
-//         newArr[arr[i]] = str[i]
+//     for (let i = k; i <= l; i++) {
+//         newArr.push(i)
 //     }
-//     return newArr.join('')
+//     return newArr
 // }
-// let scrambl = scramble(str, arr)
-// console.log(scrambl)
+// let sumIndex = findIndex(array, 4, 11)
+// console.log(sumIndex.reduce((s, i) => s + i, 0))
 
-// // 2
-// let nums = [5, 0, 3];
-// let str = "The quick brown fox jumps over the lazy dog";
-// function missingWord(nums, str) {
-//     let letters = ''
-//     let num = nums.sort((a, b) => a - b)
-//     str = str.replaceAll(" ", "")
-//     for (let i = 0; i < num.length; i++) {
-//         if (num[i] > str.length) {
-//             return "No mission today"
-//         }
-//         letters += str.charAt(num[i])
-//     }
-//     return letters.toLowerCase()
-// }
-// let word = missingWord(nums, str)
-// console.log(word)
-
-// // 3
-// let arr = ["1.1","2.2","3.3"]
-// function toNumberArray(stringarray){
+// // #9
+// let num = 10
+// function nums (n) {
 //     let arr = []
-//     for (let i = 0; i < stringarray.length; i++) {
-//         arr.push(+stringarray[i])
+//     for (let i = 1; i < n; i++) {
+//         if (i % 2 == 0) {
+//             arr.push(i)
+//         }
 //     }
-//     return arr
+//     return Math.max(...arr)
 // }
-// let newArr = toNumberArray(arr)
-// console.log(newArr)
+// let arr = nums(num)
+// console.log(arr)
 
-// // 4
-// let text = 'abs'
-// function scrollingText(text){
+// // #10
+// let num = 10
+// function nums (n) {
 //     let arr = []
-//     for (let i = 0; i < text.length; i++) {
-//         arr.push((text.slice(i) + text.slice(0, i)).toUpperCase())
+//     for (let i = 1; i < n; i++) {
+//         if (i % 2 == 0 && i != 0) {
+//             arr.push(i)
+//         }
+//     }
+//     return Math.min(...arr)
+// }
+// let arr = nums(num)
+// console.log(arr)
+
+// // #11
+// let num = 10
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         if (i % 2 != 0) {
+//             arr.push(i)
+//         }
+//     }
+//     return Math.max(...arr)
+// }
+// let arr = nums(num)
+// console.log(arr)
+
+// // #12
+// let num = 15
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         arr.push(i)
 //     }
 //     return arr
 // }
-// let arr = scrollingText(text)
-// console.log(arr)
+// let array = nums(num)
+// let res = array.reduce((sum, item) => sum + item, 0) / array.length
+// console.log(res)
 
-// // 5
-// let arr = ["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]
-// function twoSort(s) {
-//     let sorted = s.sort()
-//     return sorted[0].split('').join('***')
-// }
-// let str = twoSort(arr)
-// console.log(str)
-
-// // 6
-// let str = "I love arrays they are my favorite"
-// function stringToArray(string){
-//     return string.split(' ')
-// }
-// let arr = stringToArray(str)
-// console.log(arr)
-
-// // 7
-// let str = '1,2,3,4,5'
-// function array(string) {
-//     let arr = string.split(',')
-//     if (arr == '' || arr.length < 3) return null
-//     return arr.slice(1, -1).join(' ')
-// }
-// let arr = array(str)
-// console.log(arr)
-
-// // 8
-// let arr = [66, 123, 342]
-// let num = 66
-// function check(a, x) {
-//     return a.includes(x)
-// }
-// let trueFalse = check(arr, num)
-// console.log(trueFalse)
-
-// // 9
-// let arr1 = ['Germany', 'Ukraine'];
-// let arr2 = [2, 0]
-// function uefaEuro2016(teams, scores){
-//     let a = scores[0]
-//     let b = scores[1]
-//     if (a > b) {
-//         return `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`
-//     }
-//     if (a < b) {
-//         return `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`
-//     }
-//     if (a = b) {
-//         return `At match ${teams[0]} - ${teams[1]}, teams played draw.`
-//     }
-// }
-// let win = uefaEuro2016(arr1, arr2)
-// console.log(win)
-
-// // 10
-// let arr = [118,117,120,121,117,98,122,97,120,106,104,116,113,114,113,120,106]
-// function isVow(array){
-//      let arr = []
-//     let character = ["a", "e", "i", "o", "u"]
-//     for (let i = 0; i < array.length; i++) {
-//         let harp = String.fromCharCode(array[i])
-//         if (character.includes(harp)) {
-//             arr.push(harp)
-//         } else {
-//           arr.push(array[i])
+// // #13
+// let num = 10
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         if (i % 2 != 0) {
+//             arr.push(i)
 //         }
 //     }
 //     return arr
 // }
-// let newArr = isVow(arr)
-// console.log(newArr)
+// let arr = nums(num)
+// console.log(arr)
 
-// // 11
-// let arr = [70,85,83,32,82,79,72,32,68,65,72]
-// function arrowFunc (arr) {
-//     let str = ''
-//     for (let i = 0; i < arr.length; i++) {
-//         str += String.fromCharCode(arr[i])
+// // #14
+// let num = 10
+// function nums(n) {
+//     let arr = []
+//     for (let i = 2; i < n; i++) {
+//         if (i <= 1) {
+//             break
+//         }
+//         for (let k = 2; k < i; k++) {
+//             if (i % k == 0) {
+//                 break
+//             }
+//             arr.push(i)
+//         }
 //     }
-//     return str
+//     return arr
 // }
-// let newArr = arrowFunc(arr)
-// console.log(newArr)
-
-// // 12
-// let str = "hello"
-// function encode(string) {
-//     let arr = string.split('')
-//     let str = ''
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i] == 'a') {
-//             str += 1
-//             continue
-//         }
-//         if (arr[i] == 'e') {
-//             str += 2
-//             continue
-//         }
-//         if (arr[i] == 'i') {
-//             str += 3
-//             continue
-//         }
-//         if (arr[i] == 'o') {
-//             str += 4
-//             continue
-//         }
-//         if (arr[i] == 'u') {
-//             str += 5
-//             continue
-//         }
-//         str += arr[i]
-//     }
-//     return str
-// }
-// function decode(string) {
-//     let arr = string.split('')
-//     let str = ''
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i] == '1') {
-//             str += 'a'
-//             continue
-//         }
-//         if (arr[i] == '2') {
-//             str += 'e'
-//             continue
-//         }
-//         if (arr[i] == '3') {
-//             str += 'i'
-//             continue
-//         }
-//         if (arr[i] == '4') {
-//             str += 'o'
-//             continue
-//         }
-//         if (arr[i] == '5') {
-//             str += 'o'
-//             continue
-//         }
-//         str += arr[i]
-//     }
-//     return str
-// }
-// let newStr = encode(str)
-// let newStr2 = decode(newStr)
-// console.log(newStr, newStr2)
-
-// // 13
-// let arr = [1, 3, 4, 6]
-// function twosDifference(nums){
-//     nums.sort((a, b) => a - b);
 //
-//     let result = [];
-//
-//     for (let i = 0; i < nums.length; i++) {
-//         if (nums.includes(nums[i] + 2)) {
-//             result.push([nums[i], nums[i] + 2]);
+// let arr = nums(num)
+// console.log([... new Set(arr)])
+
+// // #15
+// let num = 20
+// function nums (n) {
+//     let arr = []
+//     for (let i = 1; i < n; i++) {
+//         if (i % 2 != 0) {
+//             arr.push(i)
 //         }
 //     }
-//     return result;
+//     return arr
 // }
-// let newArr = twosDifference(arr)
-// console.log(newArr)
+// let arr = nums(num)
+// console.log(arr)
