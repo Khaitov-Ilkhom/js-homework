@@ -99,23 +99,20 @@
 //         age: 39
 //     }
 // ]
-// function ageDifferens (arr){
-//     let ageArr = []
-//     for (let i of arr) {
-//         for (let key in i) {
-//             ageArr.push(i['age'])
+// for(let i = 0; i < users.length; i++){
+//     if(users[i + 1]){
+//         let difference = users[i].age - users[i + 1].age;
+//         if(difference < 0){
+//             console.log(`${users[i].name} ${Math.abs(difference)} yosh kichkina ${users[i + 1].name} dan` )
+//         }
+//         else{
+//             console.log(`${users[i].name} ${Math.abs(difference)} yosh katta ${users[i + 1].name} dan` )
 //         }
 //     }
-//     ageArr = [... new Set(ageArr)]
-//     let differens1 = ageArr[0] - ageArr[1]
-//     let differens2 = ageArr[1] - ageArr[2]
-//     let differens3 = ageArr[0] - ageArr[2]
-//     return `Kamol va Ali yoshlari o'rtasidagi farq ${Math.abs(differens1)}
-//     Ali va Vali yoshlari o'rtasidagi farq ${Math.abs(differens2)}
-//     Kamol va Vali yoshlari o'rtasidagi farq ${Math.abs(differens3)}`
 // }
-// let differens = ageDifferens(users)
-// console.log(differens)
+// let dif = users[users.length - 1].age - users[0].age;
+// console.log(`${users[users.length - 1].name} ${Math.abs(dif)} yosh ${dif < 0 ? "kichik" : "katta"} ${users[0].name} dan` )
+
 
 // // #8
 // let n = 15
