@@ -5,7 +5,7 @@
 //     username: "Bret",
 //     email: "Sincere@april.biz"
 // }
-// let result = Object.entries(user);
+// let result = [user];
 // localStorage.setItem("user", JSON.stringify(result))
 
 // // #2
