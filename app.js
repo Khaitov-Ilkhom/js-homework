@@ -1,4 +1,9 @@
 // # 1
+// function findNeedle(haystack, needle) {
+//   return haystack.indexOf(needle)
+// }
+// let res = findNeedle("sadbutsad", "sad")
+// console.log(res)
 
 // # 2
 // let str = "1.1.1.1"
