@@ -41,7 +41,7 @@
 
 // # 6
 // let str = "The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog"
-// let arr = str.match(/[0-9]/g )
+// let arr = str.match(/\d+/g ).map((str) => {return parseInt(str)}).reduce((sum, item) => sum + item, 0)
 // console.log(arr)
 
 // # 7
