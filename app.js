@@ -1,22 +1,25 @@
 
-let toDoList = [
-
-]
+let toDoList = JSON.parse(localStorage.getItem("Todo")) || []
 
 function setLocoalStorage () {
     localStorage.setItem("Todo", JSON.stringify(toDoList))
 }
 
 function addTodo () {
-    const newProduct = {
-        id: (Math.floor(Math.random() * 100) + 1).toString().padStart(2, "0"),
-        todo: prompt("What do you want todo: "),
-        time: new Date().toLocaleTimeString(),
-        timeAll: Date.parse("1970")
+    let newTodoName = prompt("Enter new todoname: ");
+    if(newTodoName && newTodoName.trim() !== ""){
+        const newProduct = {
+            id: (Math.floor(Math.random() * 100) + 1).toString().padStart(2, "0"),
+            todo: newTodoName,
+            time: new Date().toLocaleTimeString(),
+            timeAll: new Date().getTime()
+        }
+        toDoList.push(newProduct)
+        setLocoalStorage()
     }
-    console.log(newProduct.timeAll)
-    toDoList.push(newProduct)
-    setLocoalStorage()
+    else{
+        alert("Please enter todo name!")
+    }
     drawTable(JSON.parse(localStorage.getItem("Todo")))
 }
 const addBtn = document.querySelector("#add-btn")
@@ -39,9 +42,35 @@ function refreshTodo () {
 const refreshBtn = document.querySelector("#refresh-btn")
 refreshBtn.addEventListener("click", refreshTodo)
 
-// function sortedTodo () {
-//     if ()
-// }
+let sorted = false;
+
+const sortedTodo = function(){
+    if(sorted === false){
+        sorted = true;
+        toDoList.sort((a, b) => {
+            if(a.timeAll > b.timeAll){
+                return -1
+            }
+            else{
+                return 1
+            }
+        })
+    }
+    else{
+        sorted = false;
+        toDoList.sort((a, b) => {
+            if(a.timeAll > b.timeAll){
+                return 1
+            }
+            else{
+                return -1
+            }
+        })
+    }
+
+    setLocoalStorage()
+    drawTable(JSON.parse(localStorage.getItem("Todo")))
+}
 
 const sortedBtn = document.querySelector("#sort-btn")
 sortedBtn.addEventListener("click", sortedTodo)
