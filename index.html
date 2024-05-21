@@ -6,39 +6,31 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-<div class="container">
-    <div class="input-box">
-        <form class="form">
-            <button class="btn show-btn" id="input-check-btn">Show input</button>
-            <input required class="input-name" id="name" type="text" placeholder="Firstname">
-            <input required class="input-job-name" id="job-name" type="text" placeholder="Najot talim">
-            <input required class="input-email" type="email" name="email" id="email" placeholder="nick@gmail">
-            <button class="btn btn-submit" type="submit">Submit input</button>
-        </form>
-    </div>
-    <div class="table-box">
-        <table class="table">
-            <tr class="table-head">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Job Name</th>
-                <th>Email</th>
-                <th>Date</th>
-                <th>Img</th>
-                <th>Tools</th>
-            </tr>
-            <tr class="table-body">
-                <td>1</td>
-                <td>Name</td>
-                <td>Job name</td>
-                <td>Email</td>
-                <td>17-05-2024 13:12:14</td>
-                <td><img src="./img/Ellipse%2010%20(1).png" alt="img"></td>
-                <td><button class="table-btn edit">Edit</button>  <button class="table-btn delete">Delete</button></td>
-            </tr>
-        </table>
-    </div>
-</div>
+<h1>Student Ma'lumotlar</h1>
+<form id="studentForm">
+    <label for="name">Ism:</label>
+    <input type="text" id="name" required>
+    <label for="age">Yosh:</label>
+    <input type="number" id="age" required>
+    <label for="major">Mutaxassislik:</label>
+    <input type="text" id="major" required>
+    <button type="submit">Qo'shish</button>
+</form>
+<table id="studentTable">
+    <thead>
+    <tr>
+        <th>Ism</th>
+        <th>Yosh</th>
+        <th>Mutaxassislik</th>
+        <th>Amal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Ma'lumotlar bu yerda ko'rsatiladi -->
+    </tbody>
+</table>
+
+
 <script src="./app.js"></script>
 </body>
 </html>
