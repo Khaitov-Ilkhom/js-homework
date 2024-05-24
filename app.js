@@ -272,6 +272,7 @@ function createTable () {
 }
 
 createTable()
+setLocalStorage()
 
 table.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-btn")) {
