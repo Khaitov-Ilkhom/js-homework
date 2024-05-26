@@ -3,50 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./main.css">
-  <title>Title</title>
 </head>
 <body>
-<div class="area"></div>
-<nav class="main-menu">
-  <ul>
-    <li>
-      <a href="#">
-        <i class="fa fa-home fa-2x"></i>
-        <span class="nav-text">Home</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-user fa-2x"></i>
-        <span class="nav-text">User</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-calendar fa-2x"></i>
-        <span class="nav-text">Calendar</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-bug fa-2x"></i>
-        <span class="nav-text">Bug</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-map-marker fa-2x"></i>
-        <span class="nav-text">Map</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-github fa-2x"></i>
-        <span class="nav-text">GitHub</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<main>
+  <div class="sidebar-box">
+    <ul class="sidebar-menu">
+      <li class="menu-item">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </li>
+      <li class="menu-item">
+        <i class="bi bi-person"></i>
+        <span>Users</span>
+      </li>
+      <li class="menu-item">
+        <i class="bi bi-book"></i>
+        <span>Book</span>
+      </li>
+      <li class="menu-item">
+        <i class="bi bi-bug"></i>
+        <span>Bug</span>
+      </li>
+    </ul>
+  </div>
+  <div class="box-btn">
+    <button class="btn-icon">
+      <i class="bi bi-list"></i>
+      <i class="bi bi-x-circle"></i>
+    </button>
+  </div>
+</main>
+<script src="./app.js"></script>
 </body>
 </html>
