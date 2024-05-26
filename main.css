@@ -7,11 +7,11 @@
 .fa {
     position: relative;
     display: table-cell;
-    width: 60px;
-    height: 36px;
+    width: 64px;
+    height: 40px;
     text-align: center;
     vertical-align: middle;
-    font-size: 20px;
+    font-size: 32px;
 }
 
 .main-menu:hover {
@@ -27,20 +27,21 @@
     bottom: 0;
     height: 100%;
     left: 0;
-    width: 60px;
+    width: 65px;
     overflow: hidden;
     transition: width .05s linear;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .main-menu > ul {
-    margin: 7px 0;
+    margin: 20px 0;
 }
 
 .main-menu li {
     position: relative;
     display: block;
     width: 250px;
+    margin: 8px 0;
 }
 
 .main-menu li > a {
@@ -48,7 +49,7 @@
     display: table;
     border-collapse: collapse;
     color: #999;
-    font-size: 14px;
+    font-size: 18px;
     text-decoration: none;
     transition: all .1s linear;
 }
