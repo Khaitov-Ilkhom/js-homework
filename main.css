@@ -57,7 +57,7 @@ main {
 }
 
 .shrink {
-    max-width: 80px;
+    width: 0;
 }
 
 .menu-item span {
