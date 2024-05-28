@@ -1,19 +1,50 @@
-const btn = document.querySelector(".btn-icon");
-const sidebar = document.querySelector(".sidebar-box");
-const menuItems = document.querySelectorAll(".menu-item")
+const time = document.querySelector("#time")
+const form = document.querySelector("form")
+const res = document.querySelector("#res")
 
-btn.addEventListener("click", () => {
-    sidebar.classList.toggle("shrink")
-    btn.classList.toggle("menu-show")
-})
+let alarm = JSON.parse(localStorage.getItem("Alarm")) || []
 
-menuItems.forEach(item => {
-    item.addEventListener("click", () => {
-        menuItems.forEach(item => {
-            item.style.borderLeft = "4px solid transparent"
-            item.style.color = "#ffffff80"
-        })
-        item.style.borderLeft = "4px solid #fff"
-        item.style.color = "#fff"
+const addAlarm = (e) => {
+    e.preventDefault()
+    alarm.push({
+        time: time.value,
+        alarmRang: false
     })
-})
+    localStorage.setItem("Alarm", JSON.stringify(alarm))
+    render(alarm)
+}
+
+const timeFormat = (t) => {
+    return t.toString().padStart(2, "0")
+}
+
+let alarmChecked = setInterval(() => {
+    let t = new Date()
+    let alarms = `${timeFormat(t.getHours())}:${timeFormat(t.getMinutes())}`
+    alarm.map(item => {
+        if (item.time === alarms) {
+            item.alarmRang = true
+        }
+        return item
+    })
+    localStorage.setItem("Alarm", JSON.stringify(alarm))
+    render(alarm)
+}, 1000)
+
+const render = (a) => {
+    while (res.firstChild) {
+        res.removeChild(res.firstChild)
+    }
+    a.forEach(item => {
+        const div = document.createElement("div")
+        div.innerText = item.time
+        if (item.alarmRang) {
+            div.classList.add("rang")
+        }
+        res.appendChild(div)
+    })
+}
+
+render(alarm)
+
+form.addEventListener("submit", addAlarm)
