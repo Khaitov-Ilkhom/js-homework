@@ -1,50 +1,54 @@
-const time = document.querySelector("#time")
 const form = document.querySelector("form")
-const res = document.querySelector("#res")
+const input = document.querySelector("#currency")
+const selectFrom = document.querySelector("#from")
+const selectTo = document.querySelector("#to")
+const div = document.querySelector("#res")
 
-let alarm = JSON.parse(localStorage.getItem("Alarm")) || []
-
-const addAlarm = (e) => {
-    e.preventDefault()
-    alarm.push({
-        time: time.value,
-        alarmRang: false
-    })
-    localStorage.setItem("Alarm", JSON.stringify(alarm))
-    render(alarm)
-}
-
-const timeFormat = (t) => {
-    return t.toString().padStart(2, "0")
-}
-
-let alarmChecked = setInterval(() => {
-    let t = new Date()
-    let alarms = `${timeFormat(t.getHours())}:${timeFormat(t.getMinutes())}`
-    alarm.map(item => {
-        if (item.time === alarms) {
-            item.alarmRang = true
-        }
-        return item
-    })
-    localStorage.setItem("Alarm", JSON.stringify(alarm))
-    render(alarm)
-}, 1000)
-
-const render = (a) => {
-    while (res.firstChild) {
-        res.removeChild(res.firstChild)
+let currency = {
+    USD: {
+        USD: 1,
+        UZS: 12705,
+        EUR: 0.92,
+        RUB: 88.58
+    },
+    UZS: {
+        UZS: 1,
+        USD: 0.0005,
+        EUR: 0.0008,
+        RUB: 0.011
+    },
+    EUR: {
+        EUR: 1,
+        USD: 1.08,
+        UZS: 13787,
+        RUB: 96
+    },
+    RUB: {
+        RUB: 1,
+        USD: 88.58,
+        UZS: 143,
+        EUR: 0.010
     }
-    a.forEach(item => {
-        const div = document.createElement("div")
-        div.innerText = item.time
-        if (item.alarmRang) {
-            div.classList.add("rang")
-        }
-        res.appendChild(div)
-    })
 }
 
-render(alarm)
+localStorage.setItem("Rates", JSON.stringify(currency))
+const rates = JSON.parse(localStorage.getItem("Rates"))
+function changeCurrency (e) {
+    e.preventDefault()
 
-form.addEventListener("submit", addAlarm)
+    let amount = +input.value
+    let fromCurrency = selectFrom.value
+    let toCurrency = selectTo.value
+
+    let convertAmount = (amount / currency[fromCurrency][fromCurrency]) * currency[fromCurrency][toCurrency]
+
+    div.innerHTML = `
+        <p>${amount} ${fromCurrency} = ${convertAmount} ${toCurrency}</p>
+        <p>Buy ${rates[fromCurrency][toCurrency] - rates[fromCurrency][toCurrency] * 0.05} ${toCurrency}</p>
+        <p>Sell ${rates[fromCurrency][toCurrency] + rates[fromCurrency][toCurrency] * 0.05} ${toCurrency}</p>
+
+    `
+    form.reset()
+}
+
+form.addEventListener("submit", changeCurrency)
