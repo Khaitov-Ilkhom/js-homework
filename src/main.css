@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(263deg, #1deab5, #65ea32, #deea32, #ea7c32, #32beea, #3265ea, #b132ea, #e132ea, #ea328e);
+    background-size: 1800% 1800%;
+
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 55%}
+    50%{background-position:100% 46%}
+    100%{background-position:0% 55%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 55%}
+    50%{background-position:100% 46%}
+    100%{background-position:0% 55%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 55%}
+    50%{background-position:100% 46%}
+    100%{background-position:0% 55%}
+}
