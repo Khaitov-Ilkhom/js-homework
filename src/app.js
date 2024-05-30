@@ -1,4 +1,3 @@
-// change currency
 const video = document.querySelector("#video")
 const playBtn = document.querySelector("#play-btn")
 const nextBtn = document.querySelector("#next-btn")
@@ -13,7 +12,6 @@ const companyName = document.querySelector("#company-name")
 const  videoTitle= document.querySelector("#video-title")
 
 let playingVideo = false
-
 let currentVideoIndex = 0
 
 let videos = [
@@ -97,6 +95,7 @@ const playNext = () => {
     playingVideo = false
     playVideo()
 }
+
 const playPrev = () => {
     if (currentVideoIndex > 0) {
         currentVideoIndex--
@@ -160,6 +159,7 @@ const showListVideo = () => {
             list.prepend(li)
         })
     })
+    listBtn.classList.add("change-icon")
 }
 
 const playSelectedVideo = (e) => {
