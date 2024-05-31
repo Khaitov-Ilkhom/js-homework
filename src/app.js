@@ -165,16 +165,17 @@ const showListVideo = () => {
         })
     })
     listBtn.classList.add("change-icon")
-    closeBtn.classList.add("change-icon")
+
+
 }
 
-const clearList = () => {
-    while (list.firstChild) {
-        list.removeChild(list.firstChild)
-    }
-    closeBtn.classList.add("clear-list")
-    listBtn.classList.add("clear-list")
-}
+// const clearList = () => {
+//     while (list.firstChild) {
+//         list.removeChild(list.firstChild)
+//     }
+//     closeBtn.classList.add("clear-list")
+//     listBtn.classList.add("clear-list")
+// }
 
 const playSelectedVideo = (e) => {
     if (e.target.classList.contains("video-item")) {

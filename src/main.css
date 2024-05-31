@@ -46,13 +46,6 @@
     display: block;
 }
 
-.clear-list .bi-view-list {
-    display: block;
-}
-.clear-list .bi-x {
-    display: none;
-}
-
 .accent {
     accent-color: white;
 }
