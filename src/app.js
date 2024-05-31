@@ -11,6 +11,8 @@ const shuffleBtn = document.querySelector("#shuffle-btn")
 const companyName = document.querySelector("#company-name")
 const  videoTitle= document.querySelector("#video-title")
 
+const closeBtn = document.querySelector("#close")
+
 let playingVideo = false
 let currentVideoIndex = 0
 
@@ -142,6 +144,9 @@ const shuffleVideo = () => {
 }
 
 const showListVideo = () => {
+    while (list.firstChild) {
+        list.removeChild(list.firstChild)
+    }
     videos.forEach((vid, index) => {
         const vidTime = document.createElement("video")
         vidTime.src = vid.src
@@ -160,6 +165,15 @@ const showListVideo = () => {
         })
     })
     listBtn.classList.add("change-icon")
+    closeBtn.classList.add("change-icon")
+}
+
+const clearList = () => {
+    while (list.firstChild) {
+        list.removeChild(list.firstChild)
+    }
+    closeBtn.classList.add("clear-list")
+    listBtn.classList.add("clear-list")
 }
 
 const playSelectedVideo = (e) => {
@@ -178,3 +192,5 @@ inputRange.addEventListener("input", changeVideoTime)
 shuffleBtn.addEventListener("click", shuffleVideo)
 listBtn.addEventListener("click", showListVideo)
 list.addEventListener("click", playSelectedVideo)
+
+closeBtn.addEventListener("click", clearList)
