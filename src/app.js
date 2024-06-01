@@ -11,8 +11,8 @@ const ren = (d) => {
             <div class="flex items-center justify-center flex-col">
                 <img class="img" src="${d[i].category.image}">
                 <div class="title">
-                    <p>${d[i].title}</p>
-                    <p>$${d[i].price}</p>
+                    <b>${d[i].title}</b>
+                    <b>$${d[i].price}</b>
                 </div>
                 <p>${d[i].description}</p>
             </div>
