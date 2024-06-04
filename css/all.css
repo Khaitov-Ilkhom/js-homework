@@ -1,0 +1,81 @@
+@import url("reset.css");
+
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background: darkmagenta;
+}
+.wrapper {
+    width: 100%;
+    text-align: center;
+    max-width: 480px;
+}
+.wrapper > h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.wrapper > h2 > a {
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+.all-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    padding: 50px;
+    border-radius: 20px;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
+}
+.all-form > h1 {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.all-form > input {
+    height: 40px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid darkmagenta;
+    font-size: 16px;
+    text-indent: 10px;
+}
+.all-form > input:focus {
+    box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px;
+}
+
+button {
+    background: rgba(139, 0, 139, 0.9);
+    color: white;
+    padding: 13px 0;
+    border-radius: 10px;
+    border: 1px solid darkmagenta;
+    font-size: 16px;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+.all-form > p {
+    margin: 20px 0 0 0;
+}
+
+.success {
+    background: chartreuse !important;
+}
+.error {
+    background: #FF0000DD !important;
+}
