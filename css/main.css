@@ -1,7 +1,7 @@
 @import "reset.css";
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
     padding: 0 20px;
@@ -173,7 +173,7 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
     margin: 50px 0;
 }
 .box {
-    max-width: 500px;
+    max-width: 400px;
     min-height: 200px;
     width: 100%;
     height: 100%;
@@ -181,7 +181,7 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 10px 20px 30px;
+    padding: 20px 0 20px 50px;
     border: 1px solid rgba(139, 0, 139, 0.71);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(88, 0, 139, 0.72);
@@ -212,7 +212,7 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
 }
 
 .td > i {
-    font-size: 50px;
+    font-size: 40px;
 }
 .bi-droplet-half {
     color: aqua;
@@ -228,7 +228,7 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
 }
 
 .text > p {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     padding-bottom: 6px;
 }
@@ -237,13 +237,13 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
     margin-top: 50px;
 }
 .weather-indicator {
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid rgba(139, 0, 139, 0.71);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(88, 0, 139, 0.72);
@@ -256,8 +256,8 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 230px;
-    height: 230px;
+    width:190px;
+    height: 190px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -266,8 +266,8 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
     font-size: 24px;
 }
 .compas {
-    width: 230px;
-    height: 230px;
+    width: 190px;
+    height: 190px;
     background-image: url("/image/compass.svg");
     background-position: center;
     background-repeat: no-repeat;
