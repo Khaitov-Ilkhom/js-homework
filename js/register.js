@@ -38,6 +38,9 @@ const registerUser = (e) => {
             }
 
         })
+        .catch((error) => {
+            tostify("Error registered", "error").showToast()
+        })
 }
 
 $form.addEventListener("submit", registerUser)

@@ -150,6 +150,9 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
     color: white;
     text-align: end;
 }
+.content-right :first-child {
+    padding-bottom: 15px;
+}
 
 .content-left > h2 {
     font-size: 100px;
@@ -166,20 +169,112 @@ input[type="checkbox"]:checked + label .bi-moon-fill {
     font-size: 20px;
     font-weight: 700;
 }
+.body {
+    margin: 50px 0;
+}
+.box {
+    max-width: 500px;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 10px 20px 30px;
+    border: 1px solid rgba(139, 0, 139, 0.71);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(88, 0, 139, 0.72);
+}
 
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line {
+    padding-bottom: 40px;
+}
 .time {
     font-size: 20px;
     font-weight: 600;
-    padding-bottom: 15px;
 }
 
-.day {
-    font-size: 20px;
-    font-weight: 700;
+.td {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    gap: 15px;
 }
 
+.td > i {
+    font-size: 50px;
+}
+.bi-droplet-half {
+    color: aqua;
+}
+.bi-sunrise {
+    color: #f6b680;
+}
+.bi-sun {
+    color: yellow;
+}
+.bi-sunset {
+    color: yellow;
+}
 
+.text > p {
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 6px;
+}
 
+.box2 {
+    margin-top: 50px;
+}
+.weather-indicator {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(139, 0, 139, 0.71);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(88, 0, 139, 0.72);
+    background: darkmagenta;
+    gap: 0 30px;
+}
+
+#air-pressure {
+    background-image: url("/image/air-pressure.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 230px;
+    height: 230px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.compas {
+    width: 230px;
+    height: 230px;
+    background-image: url("/image/compass.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 92%;
+    background-color: white;
+    border-radius: 50%;
+}
 
 
 

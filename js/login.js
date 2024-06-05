@@ -35,6 +35,9 @@ const logInUser = (e) => {
                 }, 3000)
             }
         })
+        .catch((error) => {
+            tostify("Error logged in", "error").showToast()
+        })
 }
 
 $form.addEventListener("submit", logInUser)
