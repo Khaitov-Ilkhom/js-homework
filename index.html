@@ -9,77 +9,12 @@
 </head>
 <body>
 
-<div class="container">
-    <header class="head">
-        <h1 class="logo"><img src="./image/weather-icon.jpg" alt="">Weather App</h1>
-        <form id="search-city-weather" class="header-search">
-            <input type="text" placeholder="Search any city" id="input">
-            <button type="submit"><i class="bi bi-search"></i></button>
-        </form>
-        <div class="theme">
-            <input id="theme" type="checkbox">
-            <label for="theme">
-                <i class="bi bi-sun-fill"></i>
-                <i class="bi bi-moon-fill"></i>
-            </label>
+<div class="wrapper">
+    <div class="box">
+        <div id="img-box">
+
         </div>
-    </header>
-    <section class="hero">
-        <div class="hero-content">
-            <div class="content-left">
-                <img id="weather-status-img" src="" alt="">
-                <h2 id="weather-gradus"></h2>
-                <p id="location"></p>
-            </div>
-            <div class="content-right">
-                <!--<p id="sunrise" class="time"></p>-->
-                <p id="sunset" class="time"></p>
-                <p id="time" class="time"></p>
-            </div>
-        </div>
-    </section>
-    <div class="body">
-        <div class="box">
-            <div class="row line">
-                <div class="td">
-                    <i class="bi bi-droplet-half"></i>
-                    <div class="text">
-                        <p>Humidity</p>
-                        <p id="humidity"></p>
-                    </div>
-                </div>
-                <div class="td">
-                    <i class="bi bi-sunrise"></i>
-                    <div class="text">
-                        <p>Sunrise</p>
-                        <p id="sunrise2"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="td">
-                    <i class="bi bi-sun"></i>
-                    <div class="text">
-                        <p>UV index</p>
-                        <p id="sun"></p>
-                    </div>
-                </div>
-                <div class="td">
-                    <i class="bi bi-sunset"></i>
-                    <div class="text">
-                        <p>Sunset</p>
-                        <p id="sunset2"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="weather-indicator">
-                <div id="air-pressure"></div>
-                <div class="compas" id=""></div>
-            </div>
-        </div>
-        <div></div>
+        <button type="button" id="change-img">Change Image</button>
     </div>
 </div>
 
