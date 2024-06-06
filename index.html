@@ -11,10 +11,19 @@
 
 <div class="wrapper">
     <div class="box">
-        <div id="img-box">
-
+        <div class="inputs">
+            <select id="select-country">
+                <option id="country-code" value="">Select Country</option>
+            </select>
+            <form id="form">
+                <input type="number" id="holiday-date" required>
+            </form>
         </div>
-        <button type="button" id="change-img">Change Image</button>
+        <div class="table">
+            <table id="selected-country"></table>
+            <table id="border-country"></table>
+            <table id="holiday-info"></table>
+        </div>
     </div>
 </div>
 
