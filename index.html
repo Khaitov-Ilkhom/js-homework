@@ -9,6 +9,31 @@
 </head>
 <body>
 
+<div>
+    <button id="ad-product">Adding product</button>
+</div>
+
+<div class="adding-modal">
+    <div class="modal">
+        <div class="top-form">
+            <div class="close">
+                &#10006;
+            </div>
+        </div>
+        <div class="update-form">
+            <h2>Adding product</h2>
+            <form id="ad-form">
+                <input required id="ad-title" class="form-control" type="text" placeholder="Enter title">
+                <input required id="ad-price" class="form-control" type="text" placeholder="Enter price">
+                <input required id="ad-discount" class="form-control" type="text" placeholder="Enter discount">
+                <input required id="ad-description" class="form-control" type="text" placeholder="Enter description">
+                <input required id="ad-img" class="form-control" type="url" placeholder="Enter img address">
+                <button type="submit" class="submit-btn">Adding product</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <div class="wrapper">
     <div id="result" class="wrapper-cards">
 
@@ -24,7 +49,7 @@
         </div>
         <div class="update-form">
             <h2>Update product</h2>
-            <form>
+            <form id="update-form">
                 <input required id="title" class="form-control" type="text" placeholder="Enter title">
                 <input required id="price" class="form-control" type="text" placeholder="Price">
                 <input required id="discount" class="form-control" type="text" placeholder="Discount">
