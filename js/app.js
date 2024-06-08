@@ -12,7 +12,7 @@ const renderApiHtml = (data) => {
     console.log(data)
     const $fragment = document.createDocumentFragment()
 
-    data?.forEach(item => {
+    data.forEach(item => {
         const $div = document.createElement("div")
         $div.className = "card"
         $div.innerHTML = `
@@ -63,9 +63,9 @@ const inputValue = (e) => {
 
     $loginModal.style.display = "none"
     $form.reset()
-    // setTimeout(() => {
-    //     window.location.reload()
-    // }, 1000)
+    setTimeout(() => {
+        window.location.reload()
+    }, 1000)
 }
 
 $result.addEventListener("click", showEditBtn)
