@@ -8,8 +8,15 @@ const $discount = document.querySelector("#discount")
 
 let productID
 
+const hideWord = (text, limit) => {
+    if (text.length > limit) {
+        return text.slice(0, limit) + "..."
+    } else {
+        return "Hello World"
+    }
+}
+
 const renderApiHtml = (data) => {
-    console.log(data)
     const $fragment = document.createDocumentFragment()
 
     data.forEach(item => {
@@ -17,11 +24,18 @@ const renderApiHtml = (data) => {
         $div.className = "card"
         $div.innerHTML = `
             <img src="${item.image}" />
-            <p>${item.title}</p>
-            <span>${item.discount}</span>
-            <span>${item.price}</span>
-            <p>${item.description}</p>
-            <button data-product-id="${item.id}" class="edit">Edit</button>
+            <div class="body">
+                <p title="${item.title}" class="title">${hideWord(item.title, 16)}</p>
+                <div class="price-discount">
+                    <span>${item.discount} %</span>
+                    <span>$${item.price}</span>     
+                </div>
+                <p title="${item.description}" class="description">${hideWord(item.description, 80)}</p>
+                <div class="btn">
+                    <button data-product-id="${item.id}" class="edit"><i class="bi bi-pencil-square"></i></button>
+                    <button class="delete"><i class="bi bi-trash3"></i></button>
+                </div>
+            </div>
         `
         $fragment.appendChild($div)
     })
