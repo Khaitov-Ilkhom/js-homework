@@ -4,61 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Title</title>
 </head>
 <body>
 
-<div>
-    <button id="ad-product">Adding product</button>
-</div>
-
-<div class="adding-modal">
-    <div class="modal">
-        <div class="top-form">
-            <div class="close">
-                &#10006;
-            </div>
-        </div>
-        <div class="update-form">
-            <h2>Adding product</h2>
-            <form id="ad-form">
-                <input required id="ad-title" class="form-control" type="text" placeholder="Enter title">
-                <input required id="ad-price" class="form-control" type="text" placeholder="Enter price">
-                <input required id="ad-discount" class="form-control" type="text" placeholder="Enter discount">
-                <input required id="ad-description" class="form-control" type="text" placeholder="Enter description">
-                <input required id="ad-img" class="form-control" type="url" placeholder="Enter img address">
-                <button type="submit" class="submit-btn">Adding product</button>
-            </form>
-        </div>
-    </div>
-</div>
-
 <div class="wrapper">
-    <div id="result" class="wrapper-cards">
+    <div>
+        <button id="show-btn">Api Bitcoin</button>
+        <button id="show-table">Api Top Crypto </button>
+    </div>
 
+    <div class="box">
+        <table id="table">
+            <tbody id="tbody">
+                <tr>
+                    <th>Rank</th>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Explorer</th>
+                </tr>
+
+            </tbody>
+        </table>
     </div>
 </div>
 
-<div class="update-modal">
+<div class="show-chart-modal">
     <div class="modal">
-        <div class="top-form">
+        <div class="top">
             <div class="close-modal">
                 &#10006;
             </div>
         </div>
-        <div class="update-form">
-            <h2>Update product</h2>
-            <form id="update-form">
-                <input required id="title" class="form-control" type="text" placeholder="Enter title">
-                <input required id="price" class="form-control" type="text" placeholder="Price">
-                <input required id="discount" class="form-control" type="text" placeholder="Discount">
-                <button type="submit" class="submit-btn">Submit updating</button>
-            </form>
+        <div class="body-modal">
+            <h2>Bitcoin full year price</h2>
+            <canvas id="myChart"></canvas>
         </div>
     </div>
 </div>
 
-<script src="js/app.js"></script>
+<div class="show-chart">
+    <div class="modal">
+        <div class="top">
+            <div class="close">
+                &#10006;
+            </div>
+        </div>
+        <div class="body-modal">
+            <h2>Chart of coin</h2>
+            <canvas id="myCharts"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/api-chart.js"></script>
+<script src="./js/api-table-chart.js"></script>
 </body>
 </html>

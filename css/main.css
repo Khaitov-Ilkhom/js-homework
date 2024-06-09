@@ -6,71 +6,76 @@
 
 body {
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: sans-serif;
+    height: 100vh;
     background-color: rgba(169, 169, 169, 0.65);
 }
 
 .wrapper {
     max-width: 1400px;
     width: 100%;
-    margin: 50px 0;
-}
-
-.wrapper-cards {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-}
-
-.body {
-    padding: 10px 14px;
-}
-
-.body div {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 8px 0;
+    flex-direction: column;
+    gap: 0 15px;
 }
 
-.card {
-    background-color: white;
-    max-width: 220px;
-    max-height: 400px;
+button {
+    padding: 10px 20px;
     border-radius: 10px;
-    transition: 0.5s;
-    box-shadow: rgba(0, 0, 0, 0.58) 0 10px 20px;
-}
-.card:hover {
-    transform: scale(1.05);
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    border: none;
+    transition: 0.4s;
 }
 
-.card img{
-    width: 100%;
-    max-height: 150px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
+button:hover {
+    transform: scale(0.95);
 }
-.title {
-    color: midnightblue;
-    font-size: 16px;
-    font-weight: 700;
+
+#show-btn {
+    background-color: darkmagenta;
 }
-.price-discount {
-    color: #14071e;
-    font-weight: 800;
+
+#show-table {
+    background-color: darkslateblue;
 }
-.description {
-    overflow: hidden;
-    height: 70px;
-    margin-bottom: 10px;
+
+.box {
+    margin-top: 60px;
+    background-color: gray;
+    border-radius: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
 }
-.update-modal{
+
+#table {
+    display: none;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 16px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.link {
+    text-decoration: none;
+    color: rebeccapurple;
+}
+
+.show-chart-modal{
     position: fixed;
     top: 0;
     right: 0;
@@ -83,7 +88,7 @@ body {
     align-items: center;
 }
 
-.adding-modal {
+.show-chart{
     position: fixed;
     top: 0;
     right: 0;
@@ -100,76 +105,25 @@ body {
     background-color: #e6ecf0;
     padding: 10px 0 20px 0;
     border-radius: 10px;
-    width: 450px;
+    width: 1200px;
     text-align: center;
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.top-form{
+.top{
     display: flex;
     justify-content: flex-end;
 }
 
-.top-form .close-modal, .close {
+.top .close-modal, .close {
     cursor: pointer;
     padding: 0 20px;
     font-size: 20px;
 }
 
-.update-form h2{
+.body-modal h2{
     letter-spacing: 2px;
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.update-form form input{
-    width: 75%;
-    margin-bottom: 20px;
-    padding: 12px 12px;
-    box-sizing: border-box;
-    border: 1px solid #d0d5d8;
-    border-radius: 3px;
-}
 
-.update-form form button{
-    padding: 12px 0;
-    width: 75%;
-    background-color: #5dca88;
-    border: 0;
-    border-radius: 3px;
-    color: white;
-    margin: 10px auto;
-    cursor: pointer;
-}
-
-button {
-    padding: 6px 10px;
-    font-size: 14px;
-    border-radius: 8px;
-    border: none;
-}
-.bi-pencil-square {
-    pointer-events: none;
-}
-.bi-trash3 {
-    pointer-events: none;
-}
-.edit {
-    background-color: #d1d11f;
-    color: white;
-}
-
-.delete {
-    background-color: #e82020;
-    color: white;
-}
-
-button:hover,
-button:active {
-    transform: scale(0.9);
-}
