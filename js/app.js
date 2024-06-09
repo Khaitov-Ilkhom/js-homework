@@ -16,7 +16,6 @@ const $adImg = document.querySelector("#ad-img")
 const $addingModal = document.querySelector(".adding-modal")
 const $closedModal = document.querySelector(".close")
 
-
 let productID
 
 const hideWord = (text, limit) => {
@@ -87,8 +86,6 @@ const inputValue = (e) => {
 
     $updateModal.style.display = "none"
     $form.reset()
-
-    renderApiHtml()
 }
 
 const editBtn = (e) => {
@@ -123,7 +120,6 @@ const addingProducts = (e) => {
         .then(res => res.json())
         .then(data => renderApi())
 
-    renderApiHtml()
     $addingModal.style.display = "none"
 }
 
@@ -138,6 +134,6 @@ $closeModal.addEventListener("click", () => {
 $closedModal.addEventListener("click", () => {
     $addingModal.style.display = "none"
 })
-renderApi()
 $form.addEventListener("submit", inputValue)
 $adProductForm.addEventListener("submit", addingProducts)
+renderApi()
