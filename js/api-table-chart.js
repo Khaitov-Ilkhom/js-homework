@@ -21,41 +21,45 @@ const renderApiInfo = (data) => {
     $tbody.appendChild($fragment)
 }
 
+const renderChart = (data) => {
+    let times = []
+    let usd = []
+    data.data.forEach(item => {
+        let time = new Date(item.time).toLocaleString().split(",").splice(0, 1)
+        times.push(time)
+        let price = Math.floor(Number(item.priceUsd))
+        usd.push(price)
+    })
+    let newArr = times.flat(5)
+
+    new Chart($ctx, {
+        type: 'line',
+        data: {
+            labels: newArr,
+            datasets: [{
+                label: '# of Votes',
+                data: usd,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
 const showChart = (e) => {
     if (e.target.classList.contains("name")) {
         let coinName = e.target.getAttribute("data-coin-name")
         fetch(`https://api.coincap.io/v2/assets/${coinName}/history?interval=d1`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                let times = []
-                let usd = []
-                data.data.forEach(item => {
-                    let time = new Date(item.time).toLocaleString().split(",").splice(0, 1)
-                    times.push(time)
-                    let price = Math.floor(Number(item.priceUsd))
-                    usd.push(price)
-                })
-                let newArr = times.flat(5)
-
-                new Chart($ctx, {
-                    type: 'line',
-                    data: {
-                        labels: newArr,
-                        datasets: [{
-                            label: '# of Votes',
-                            data: usd,
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                });
+                renderApiCoins()
+                renderChart(data)
             })
     }
     $chartModal.style.display = "flex"
@@ -74,7 +78,4 @@ $showTable.addEventListener("click", () => {
 $close.addEventListener("click", () => {
     $chartModal.style.display = "none"
 })
-// btn.addEventListener("click", () => {
-//     $chartModal.style.display = "flex"
-// })
 $tbody.addEventListener("click", showChart)

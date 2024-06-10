@@ -32,6 +32,7 @@ const renderApiHtml = (data = []) => {
             }
         }
     });
+
 }
 
 const renderApi = async () => {
