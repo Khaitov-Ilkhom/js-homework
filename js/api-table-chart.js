@@ -13,7 +13,7 @@ const renderApiInfo = (data) => {
             <td>${data[i].rank}</td>
             <td class="name" data-coin-name="${data[i].id}">${data[i].symbol}</td>
             <td>${data[i].name}</td>
-            <td>${data[i].priceUsd}</td>
+            <td>$${data[i].priceUsd}</td>
             <td><a class="link" href="${data[i].explorer}" target="_blank"><i class="bi bi-globe2"></i></a></td>
         `
         $fragment.appendChild($tr)
@@ -57,10 +57,7 @@ const showChart = (e) => {
         let coinName = e.target.getAttribute("data-coin-name")
         fetch(`https://api.coincap.io/v2/assets/${coinName}/history?interval=d1`)
             .then(res => res.json())
-            .then(data => {
-                renderApiCoins()
-                renderChart(data)
-            })
+            .then(data => renderChart(data))
     }
     $chartModal.style.display = "flex"
 }
