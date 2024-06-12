@@ -17,7 +17,7 @@ export const renderData = (data) => {
                 <div class="desc">
                     ${item.summary}
                 </div>
-                <a target="_blank" href="./page.html?id=${item.id}">Show more</a>
+                <a class="btn" target="_blank" href="./page.html?id=${item.id}">Show more</a>
             </div>
         `
         $fragment.appendChild($div)
